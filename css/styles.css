@@ -307,8 +307,8 @@ img {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.head-link .link:active {
-    color: #2196F3;
+.link.current {
+    color: var(--color-secondary);
 }
 
 .head-link .link:after {
@@ -330,9 +330,6 @@ img {
 }
 .head-link .link:hover::after {
     opacity: 1; 
-}
-.head-link .link:active::after {
-    color: #2196F3;
 }
 .head-link-2 .link {
     display: block;
@@ -654,6 +651,7 @@ img {
     height: 100%;
     z-index: 1;
     background-color:  rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms,visibility 250ms;
 }
 
 .is-hidden {
