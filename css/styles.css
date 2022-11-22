@@ -25,7 +25,6 @@ body {
     font-size: 14px;
     line-height: 1.7;    
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    /*overflow: hidden;*/
 }
 button {
     cursor: pointer;
@@ -151,11 +150,15 @@ img {
 .photo-text {
     position: absolute;
     display: flex;
-    top: 224px;
+    bottom: 0px;
     left: 0px;
+    align-items: center;
     width: 370px;
     height: 70px;
-    padding-top: 25px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
     color: #ffffff;
     background-color: #2F303A;
     opacity: 80%;    
@@ -198,7 +201,7 @@ img {
 }
 .net-icon {
     fill: #AFB1B8;
-    transition-property: background-color, fill;
+    transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -304,7 +307,11 @@ img {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.head-link .link::after {
+.head-link .link:active {
+    color: #2196F3;
+}
+
+.head-link .link:after {
     display: block;
     opacity: 0;
     position: absolute;
@@ -316,12 +323,16 @@ img {
     transition: 250ms cubic-bezier(0.4,0,0.2,1);
     margin-top: 28px;
     transition-property: opasity;
+    transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .head-link .link:hover::after {
     opacity: 1; 
+}
+.head-link .link:active::after {
+    color: #2196F3;
 }
 .head-link-2 .link {
     display: block;
@@ -474,8 +485,6 @@ img {
 }
 
 .proj-link {
-    position: relative;
-    overflow: hidden;
     display: block; 
     text-decoration: none;
 }
@@ -495,6 +504,7 @@ img {
     color: var(--color-background);
     background-color: rgba(33, 150, 243, 0.9);
     transition: transform 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .meaning-overlay {
     padding: 63px 24px;  
