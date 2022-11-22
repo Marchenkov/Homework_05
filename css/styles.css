@@ -308,7 +308,20 @@ img {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link.current {
+    position: relative;
     color: var(--color-secondary);
+    
+}
+.link.current::after{
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: -1px;
+    background-color: var(--color-secondary);
+    border-radius: 2px;
 }
 
 .head-link .link:after {
